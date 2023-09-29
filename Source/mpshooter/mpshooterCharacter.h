@@ -75,7 +75,7 @@ public:
 	UFUNCTION(BlueprintCallable)
 		void CallOpenLevel(const FString& Address);
 	UFUNCTION(BlueprintCallable)
-		void CallClientLevel(const FString& Address);
+		void CallClientTravel(const FString& Address);
 
 };
 
