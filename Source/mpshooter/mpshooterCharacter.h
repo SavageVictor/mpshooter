@@ -5,7 +5,9 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "Logging/LogMacros.h"
+#include "OnlineSubsystem.h"
 #include "mpshooterCharacter.generated.h"
+
 
 class USpringArmComponent;
 class UCameraComponent;
@@ -77,5 +79,10 @@ public:
 	UFUNCTION(BlueprintCallable)
 		void CallClientTravel(const FString& Address);
 
+
+public:
+
+	// Pointer to the online session interface
+	class TSharedPtr<class IOnlineSession, ESPMode::ThreadSafe> OnlineSessionInterface;
 };
 
