@@ -13,13 +13,15 @@
 #include "Kismet/GameplayStatics.h"
 #include "OnlineSubsystem.h"
 #include "Interfaces/OnlineSessionInterface.h"
+#include "OnlineSessionSettings.h"
 
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
 
 //////////////////////////////////////////////////////////////////////////
 // AmpshooterCharacter
 
-AmpshooterCharacter::AmpshooterCharacter()
+AmpshooterCharacter::AmpshooterCharacter():
+	CreateSessionCompleteDelegate(FOnCreateSessionCompleteDelegate::CreateUObject(this, &ThisClass::OnCreateSessionComplete))
 {
 	// Set size for collision capsule
 	GetCapsuleComponent()->InitCapsuleSize(42.f, 96.0f);
@@ -165,6 +167,46 @@ void AmpshooterCharacter::CallClientTravel(const FString& Address)
 	if(PlayerController)
 	{
 		PlayerController->ClientTravel(Address, ETravelType::TRAVEL_Absolute);
+	}
+}
+
+void AmpshooterCharacter::CreateGameSession()
+{
+	if (!OnlineSessionInterface.IsValid())
+	{
+		return;
+	}
+
+	auto ExistingSession = OnlineSessionInterface->GetNamedSession(NAME_GameSession);
+
+	if (ExistingSession != nullptr)
+	{
+		OnlineSessionInterface->DestroySession(NAME_GameSession);
+	}
+
+	OnlineSessionInterface->AddOnCreateSessionCompleteDelegate_Handle(CreateSessionCompleteDelegate);
+
+	TSharedPtr<FOnlineSessionSettings> SessionSettings = MakeShareable(new FOnlineSessionSettings());
+
+	const ULocalPlayer* LocalPlayer = GetWorld()->GetFirstLocalPlayerFromController();
+	OnlineSessionInterface->CreateSession(*LocalPlayer->GetPreferredUniqueNetId(), NAME_GameSession, *SessionSettings);
+}
+
+void AmpshooterCharacter::OnCreateSessionComplete(FName SessionName, bool bWasSuccessful)
+{
+	if(bWasSuccessful)
+	{
+		if (GEngine)
+		{
+			GEngine->AddOnScreenDebugMessage(-1, 15.f, FColor::Blue, FString::Printf(TEXT("Created session: %s"), *SessionName.ToString()));
+		}
+	}
+	else
+	{
+		if(GEngine)
+		{
+			GEngine->AddOnScreenDebugMessage(-1, 15.f, FColor::Red, FString(TEXT("Failed to create session")));
+		}
 	}
 }
 
