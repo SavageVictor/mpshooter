@@ -9,6 +9,8 @@
 #include "OnlineSubsystem.h"
 #include "Interfaces/OnlineSessionDelegates.h"
 #include <OnlineSessionSettings.h>
+
+#include "Interfaces/OnlineSessionInterface.h"
 #include "mpshooterCharacter.generated.h"
 
 
@@ -97,14 +99,15 @@ protected:
 	void JoinGameSession();
 
 	void OnCreateSessionComplete(FName SessionName, bool bWasSuccessful);
-	void OnFindSessionsComplete(bool bWasSuccessful);
 
 	void OnFindSessionComplete(bool bWasSuccessful);
+	void OnJoinSessionComplete(FName SessionName, EOnJoinSessionCompleteResult::Type Result);
 
 private:
 
 	FOnCreateSessionCompleteDelegate CreateSessionCompleteDelegate;
 	FOnFindSessionsCompleteDelegate FindSessionsCompleteDelegate;
 	TSharedPtr<FOnlineSessionSearch> SessionSearch;
+	FOnJoinSessionCompleteDelegate JoinSessionCompleteDelegate;
 };
 
