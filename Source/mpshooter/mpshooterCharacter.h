@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "OnlineSessionSettings.h"
 #include "GameFramework/Character.h"
 #include "Logging/LogMacros.h"
 #include "OnlineSubsystem.h"
@@ -96,6 +97,7 @@ protected:
 	void JoinGameSession();
 
 	void OnCreateSessionComplete(FName SessionName, bool bWasSuccessful);
+	void OnFindSessionsComplete(bool bWasSuccessful);
 
 	void OnFindSessionComplete(bool bWasSuccessful);
 
