@@ -223,6 +223,11 @@ void AmpshooterCharacter::OnCreateSessionComplete(FName SessionName, bool bWasSu
 
 void AmpshooterCharacter::OnFindSessionComplete(bool bWasSuccessful)
 {
+	if (GEngine)
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 15.f, FColor::Green, FString(TEXT("Find session complete")));
+	}
+
 	for ( auto Result : SessionSearch->SearchResults)
 	{
 		FString Id = Result.GetSessionIdStr();
@@ -232,6 +237,11 @@ void AmpshooterCharacter::OnFindSessionComplete(bool bWasSuccessful)
 			GEngine->AddOnScreenDebugMessage(-1, 15.f, FColor::Cyan, FString::Printf(TEXT("Id: %s, User: %s"), *Id, *User));
 		}
 	}
+
+	if (GEngine)
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 15.f, FColor::Red, FString(TEXT("Users not found")));
+	}
 }
 
 void AmpshooterCharacter::JoinGameSession()
@@ -240,6 +250,12 @@ void AmpshooterCharacter::JoinGameSession()
 	if(!OnlineSessionInterface.IsValid())
 	{
 		return;
+
+	}
+
+	if (GEngine)
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 15.f, FColor::Green, FString(TEXT("Looking for session")));
 	}
 
 	OnlineSessionInterface->AddOnFindSessionsCompleteDelegate_Handle(FindSessionsCompleteDelegate);
