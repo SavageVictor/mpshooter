@@ -177,6 +177,7 @@ void AmpshooterCharacter::CreateGameSession()
 		return;
 	}
 
+
 	auto ExistingSession = OnlineSessionInterface->GetNamedSession(NAME_GameSession);
 
 	if (ExistingSession != nullptr)
@@ -188,6 +189,13 @@ void AmpshooterCharacter::CreateGameSession()
 
 
 	TSharedPtr<FOnlineSessionSettings> SessionSettings = MakeShareable(new FOnlineSessionSettings());
+	SessionSettings->bIsLANMatch = false;
+	SessionSettings->NumPublicConnections = 4;
+	SessionSettings->bAllowJoinInProgress = true;
+	SessionSettings->bAllowJoinViaPresence = true;
+	SessionSettings->bShouldAdvertise = true;
+	SessionSettings->bUsesPresence = true;
+
 	SessionSettings->bIsLANMatch = false;
 	SessionSettings->NumPublicConnections = 4;
 	SessionSettings->bAllowJoinInProgress = true;
@@ -210,7 +218,7 @@ void AmpshooterCharacter::OnCreateSessionComplete(FName SessionName, bool bWasSu
 	}
 	else
 	{
-		if(GEngine)
+		if (GEngine)
 		{
 			GEngine->AddOnScreenDebugMessage(-1, 15.f, FColor::Red, FString(TEXT("Failed to create session")));
 		}
