@@ -16,7 +16,7 @@ void ALobbyGameMode::PostLogin(APlayerController* NewPlayer)
 
 		if(GEngine)
 		{
-			GEngine->AddOnScreenDebugMessage(1, 60.f, FColor::Yellow, FString::Printf(TEXT("Players in game: %d"), NumberOfPlayers));
+			GEngine->AddOnScreenDebugMessage(2, 60.f, FColor::Yellow, FString::Printf(TEXT("Players in game: %d"), NumberOfPlayers));
 
 
 			APlayerState* PlayerState = NewPlayer->GetPlayerState<APlayerState>();
@@ -39,7 +39,7 @@ void ALobbyGameMode::Logout(AController* Exiting)
 
 		if (GEngine)
 		{
-			GEngine->AddOnScreenDebugMessage(1, 60.f, FColor::Yellow, FString::Printf(TEXT("Players in game: %d"), NumberOfPlayers - 1));
+			GEngine->AddOnScreenDebugMessage(2, 60.f, FColor::Yellow, FString::Printf(TEXT("Players in game: %d"), NumberOfPlayers - 1));
 
 
 			APlayerState* PlayerState = Exiting->GetPlayerState<APlayerState>();
