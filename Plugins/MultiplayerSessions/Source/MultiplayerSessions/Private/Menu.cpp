@@ -101,11 +101,20 @@ void UMenu::OnCreateSession(bool bWasSuccessful)
 
 }
 
-void UMenu::OnFindSession(const TArray<FOnlineSessionSearchResult>& SessionResults, bool bWassSuccessful)
+void UMenu::OnFindSession(const TArray<FOnlineSessionSearchResult>& SessionResults, bool bWasSuccessful)
 {
 	if (MultiplayerSessionsSubsystem == nullptr)
 	{
+		if (GEngine)
+		{
+			GEngine->AddOnScreenDebugMessage(-1, 15.f, FColor::Cyan, FString::Printf(TEXT("Multiplayer session subsystem is nullptr")));
+		}
 		return;
+	}
+
+	if (GEngine && SessionResults.IsEmpty())
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 15.f, FColor::Cyan, FString::Printf(TEXT("Sessions Results is empty")));
 	}
 
 	for (auto Result : SessionResults)
@@ -138,7 +147,13 @@ void UMenu::OnFindSession(const TArray<FOnlineSessionSearchResult>& SessionResul
 			return;
 		}
 	}
-	if (!bWassSuccessful || SessionResults.Num() == 0)
+
+	if (GEngine)
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 15.f, FColor::Cyan, FString::Printf(TEXT("Exited OnFindSession loop")));
+	}
+
+	if (!bWasSuccessful || SessionResults.Num() == 0)
 	{
 		JoinButton->SetIsEnabled(true);
 	}
