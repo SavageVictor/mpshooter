@@ -59,7 +59,9 @@
             "d:\\ue_5.3\\engine\\plugins\\online\\onlinesubsystem\\source\\public\\onlinesubsystem.h",
             "d:\\ue_5.3\\engine\\plugins\\online\\onlinesubsystem\\source\\public\\onlinesubsystemmodule.h",
             "d:\\mpshootertest2\\plugins\\multiplayersessions\\source\\multiplayersessions\\private\\multiplayersessions.cpp",
-            "d:\\mpshootertest2\\plugins\\multiplayersessions\\source\\multiplayersessions\\public\\multiplayersessions.h"
+            "d:\\mpshootertest2\\plugins\\multiplayersessions\\source\\multiplayersessions\\public\\multiplayersessions.h",
+            "d:\\mpshootertest2\\plugins\\multiplayersessions\\source\\multiplayersessions\\private\\multiplayersessionssubsystem.cpp",
+            "d:\\ue_5.3\\engine\\plugins\\online\\onlinebase\\source\\public\\online\\onlinesessionnames.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []
