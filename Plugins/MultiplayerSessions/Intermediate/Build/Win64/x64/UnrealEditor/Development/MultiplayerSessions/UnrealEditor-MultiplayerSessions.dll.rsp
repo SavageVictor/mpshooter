@@ -20,7 +20,7 @@
 /ALTERNATENAME:__imp___std_init_once_complete=__imp_InitOnceComplete
 /DELAYLOAD:"d3d12.dll"
 /DELAYLOAD:"DBGHELP.DLL"
-/LIBPATH:"D:\VS2022\VC\Tools\MSVC\14.36.32532\lib\x64"
+/LIBPATH:"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\lib\x64"
 /LIBPATH:"C:\Program Files (x86)\Windows Kits\10\lib\10.0.22621.0\ucrt\x64"
 /LIBPATH:"C:\Program Files (x86)\Windows Kits\10\lib\10.0.22621.0\um\x64"
 /NODEFAULTLIB:"LIBCMT"
@@ -34,9 +34,9 @@
 /NODEFAULTLIB:"LIBCD"
 /NODEFAULTLIB:"LIBCPD"
 /FUNCTIONPADMIN:6
-"D:\mpshootertest2\Intermediate\Build\Win64\x64\TPShooterEditor\Development\Engine\SharedPCH.Engine.Cpp20.h.obj"
-"D:\mpshootertest2\Plugins\MultiplayerSessions\Intermediate\Build\Win64\x64\UnrealEditor\Development\MultiplayerSessions\Module.MultiplayerSessions.cpp.obj"
-"D:\mpshootertest2\Plugins\MultiplayerSessions\Intermediate\Build\Win64\x64\UnrealEditor\Development\MultiplayerSessions\Default.rc2.res"
+"C:\GamsCreate\Unrl53\mpshooter\Intermediate\Build\Win64\x64\TPShooterEditor\Development\Engine\SharedPCH.Engine.Cpp20.h.obj"
+"C:\GamsCreate\Unrl53\mpshooter\Plugins\MultiplayerSessions\Intermediate\Build\Win64\x64\UnrealEditor\Development\MultiplayerSessions\Module.MultiplayerSessions.cpp.obj"
+"C:\GamsCreate\Unrl53\mpshooter\Plugins\MultiplayerSessions\Intermediate\Build\Win64\x64\UnrealEditor\Development\MultiplayerSessions\Default.rc2.res"
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\CoreUObject\UnrealEditor-CoreUObject.lib"
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\Engine\UnrealEditor-Engine.lib"
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\Slate\UnrealEditor-Slate.lib"
@@ -70,7 +70,7 @@
 "synchronization.lib"
 "dwmapi.lib"
 "imm32.lib"
-/OUT:"D:\mpshootertest2\Plugins\MultiplayerSessions\Binaries\Win64\UnrealEditor-MultiplayerSessions.dll"
-/IMPLIB:"D:\mpshootertest2\Plugins\MultiplayerSessions\Intermediate\Build\Win64\x64\UnrealEditor\Development\MultiplayerSessions\UnrealEditor-MultiplayerSessions.sup.lib"
-/PDB:"D:\mpshootertest2\Plugins\MultiplayerSessions\Binaries\Win64\UnrealEditor-MultiplayerSessions.pdb"
+/OUT:"C:\GamsCreate\Unrl53\mpshooter\Plugins\MultiplayerSessions\Binaries\Win64\UnrealEditor-MultiplayerSessions.dll"
+/IMPLIB:"C:\GamsCreate\Unrl53\mpshooter\Plugins\MultiplayerSessions\Intermediate\Build\Win64\x64\UnrealEditor\Development\MultiplayerSessions\UnrealEditor-MultiplayerSessions.sup.lib"
+/PDB:"C:\GamsCreate\Unrl53\mpshooter\Plugins\MultiplayerSessions\Binaries\Win64\UnrealEditor-MultiplayerSessions.pdb"
 /ignore:4078
