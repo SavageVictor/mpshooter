@@ -30,6 +30,50 @@ void ATPCharacter::BeginPlay()
 	
 }
 
+// Called to bind functionality to input
+void ATPCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
+{
+	Super::SetupPlayerInputComponent(PlayerInputComponent);
+
+	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ATPCharacter::Jump);
+
+	PlayerInputComponent->BindAxis("MoveForward", this, &ATPCharacter::MoveForward);
+	PlayerInputComponent->BindAxis("MoveRight", this, &ATPCharacter::MoveRight);
+	PlayerInputComponent->BindAxis("Turn", this, &ATPCharacter::Turn);
+	PlayerInputComponent->BindAxis("LookUp", this, &ATPCharacter::LookUp);
+}
+
+
+void ATPCharacter::MoveForward(float Value)
+{
+	if (Controller != nullptr && Value != 0.f)
+	{
+		const FRotator YawRotation(0.f, Controller->GetControlRotation().Yaw, 0.f);
+		const FVector Direction(FRotationMatrix(YawRotation).GetUnitAxis(EAxis::X));
+		AddMovementInput(2 * Direction, Value);
+	}
+}
+
+void ATPCharacter::MoveRight(float Value)
+{
+	if (Controller != nullptr && Value != 0.f)
+	{
+		const FRotator YawRotation(0.f, Controller->GetControlRotation().Yaw, 0.f);
+		const FVector Direction(FRotationMatrix(YawRotation).GetUnitAxis(EAxis::Y));
+		AddMovementInput(2 * Direction, Value);
+	}
+}
+
+void ATPCharacter::Turn(float Value)
+{
+	AddControllerYawInput(Value);
+}
+
+void ATPCharacter::LookUp(float Value)
+{
+	AddControllerPitchInput(Value);
+}
+
 // Called every frame
 void ATPCharacter::Tick(float DeltaTime)
 {
@@ -37,10 +81,4 @@ void ATPCharacter::Tick(float DeltaTime)
 
 }
 
-// Called to bind functionality to input
-void ATPCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
-{
-	Super::SetupPlayerInputComponent(PlayerInputComponent);
-
-}
 

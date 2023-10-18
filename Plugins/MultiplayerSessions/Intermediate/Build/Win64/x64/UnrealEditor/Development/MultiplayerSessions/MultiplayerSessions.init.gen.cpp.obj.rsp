@@ -1,10 +1,10 @@
-"D:\mpshootertest2\Plugins\MultiplayerSessions\Intermediate\Build\Win64\x64\UnrealEditor\Development\MultiplayerSessions\Module.MultiplayerSessions.cpp"
+"D:\mpshootertest2\Plugins\MultiplayerSessions\Intermediate\Build\Win64\UnrealEditor\Inc\MultiplayerSessions\UHT\MultiplayerSessions.init.gen.cpp"
 /FI"D:\mpshootertest2\Intermediate\Build\Win64\x64\TPShooterEditor\Development\Engine\SharedPCH.Engine.Cpp20.h"
 /FI"D:\mpshootertest2\Plugins\MultiplayerSessions\Intermediate\Build\Win64\x64\UnrealEditor\Development\MultiplayerSessions\Definitions.MultiplayerSessions.h"
 /Yu"D:\mpshootertest2\Intermediate\Build\Win64\x64\TPShooterEditor\Development\Engine\SharedPCH.Engine.Cpp20.h"
 /Fp"D:\mpshootertest2\Intermediate\Build\Win64\x64\TPShooterEditor\Development\Engine\SharedPCH.Engine.Cpp20.h.pch"
-/Fo"D:\mpshootertest2\Plugins\MultiplayerSessions\Intermediate\Build\Win64\x64\UnrealEditor\Development\MultiplayerSessions\Module.MultiplayerSessions.cpp.obj"
-/sourceDependencies "D:\mpshootertest2\Plugins\MultiplayerSessions\Intermediate\Build\Win64\x64\UnrealEditor\Development\MultiplayerSessions\Module.MultiplayerSessions.cpp.dep.json"
+/Fo"D:\mpshootertest2\Plugins\MultiplayerSessions\Intermediate\Build\Win64\x64\UnrealEditor\Development\MultiplayerSessions\MultiplayerSessions.init.gen.cpp.obj"
+/sourceDependencies "D:\mpshootertest2\Plugins\MultiplayerSessions\Intermediate\Build\Win64\x64\UnrealEditor\Development\MultiplayerSessions\MultiplayerSessions.init.gen.cpp.dep.json"
 @"D:\mpshootertest2\Plugins\MultiplayerSessions\Intermediate\Build\Win64\x64\UnrealEditor\Development\MultiplayerSessions\MultiplayerSessions.Shared.rsp"
 /Zc:inline
 /nologo

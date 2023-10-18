@@ -6,7 +6,10 @@
 /NAME:"UnrealEditor-MultiplayerSessions.dll"
 /IGNORE:4221
 /NODEFAULTLIB
-"C:\GamsCreate\Unrl53\mpshooter\Intermediate\Build\Win64\x64\TPShooterEditor\Development\Engine\SharedPCH.Engine.Cpp20.h.obj"
-"C:\GamsCreate\Unrl53\mpshooter\Plugins\MultiplayerSessions\Intermediate\Build\Win64\x64\UnrealEditor\Development\MultiplayerSessions\Module.MultiplayerSessions.cpp.obj"
-"C:\GamsCreate\Unrl53\mpshooter\Plugins\MultiplayerSessions\Intermediate\Build\Win64\x64\UnrealEditor\Development\MultiplayerSessions\Default.rc2.res"
-/OUT:"C:\GamsCreate\Unrl53\mpshooter\Plugins\MultiplayerSessions\Intermediate\Build\Win64\x64\UnrealEditor\Development\MultiplayerSessions\UnrealEditor-MultiplayerSessions.lib"
+"D:\mpshootertest2\Intermediate\Build\Win64\x64\TPShooterEditor\Development\Engine\SharedPCH.Engine.Cpp20.h.obj"
+"D:\mpshootertest2\Plugins\MultiplayerSessions\Intermediate\Build\Win64\x64\UnrealEditor\Development\MultiplayerSessions\Module.MultiplayerSessions.cpp.obj"
+"D:\mpshootertest2\Plugins\MultiplayerSessions\Intermediate\Build\Win64\x64\UnrealEditor\Development\MultiplayerSessions\Menu.gen.cpp.obj"
+"D:\mpshootertest2\Plugins\MultiplayerSessions\Intermediate\Build\Win64\x64\UnrealEditor\Development\MultiplayerSessions\MultiplayerSessions.init.gen.cpp.obj"
+"D:\mpshootertest2\Plugins\MultiplayerSessions\Intermediate\Build\Win64\x64\UnrealEditor\Development\MultiplayerSessions\MultiplayerSessionsSubsystem.gen.cpp.obj"
+"D:\mpshootertest2\Plugins\MultiplayerSessions\Intermediate\Build\Win64\x64\UnrealEditor\Development\MultiplayerSessions\Default.rc2.res"
+/OUT:"D:\mpshootertest2\Plugins\MultiplayerSessions\Intermediate\Build\Win64\x64\UnrealEditor\Development\MultiplayerSessions\UnrealEditor-MultiplayerSessions.lib"
