@@ -1,0 +1,21 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\gamscreate\\unrl53\\mpshooter\\plugins\\multiplayersessions\\intermediate\\build\\win64\\unrealgame\\inc\\multiplayersessions\\uht\\multiplayersessionssubsystem.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\gamscreate\\unrl53\\mpshooter\\intermediate\\build\\win64\\x64\\tpshooter\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "c:\\gamscreate\\unrl53\\mpshooter\\plugins\\multiplayersessions\\intermediate\\build\\win64\\x64\\unrealgame\\development\\multiplayersessions\\definitions.multiplayersessions.h",
+            "c:\\gamscreate\\unrl53\\mpshooter\\plugins\\multiplayersessions\\source\\multiplayersessions\\public\\multiplayersessionssubsystem.h",
+            "c:\\zastosunky\\ue_5.3\\engine\\plugins\\online\\onlinesubsystem\\source\\public\\interfaces\\onlinesessioninterface.h",
+            "c:\\zastosunky\\ue_5.3\\engine\\plugins\\online\\onlinesubsystem\\source\\public\\onlinesubsystemtypes.h",
+            "c:\\zastosunky\\ue_5.3\\engine\\plugins\\online\\onlinesubsystem\\source\\public\\onlinesubsystemnames.h",
+            "c:\\zastosunky\\ue_5.3\\engine\\plugins\\online\\onlinesubsystem\\source\\public\\onlinedelegatemacros.h",
+            "c:\\zastosunky\\ue_5.3\\engine\\plugins\\online\\onlinesubsystem\\source\\public\\interfaces\\onlinesessiondelegates.h",
+            "c:\\zastosunky\\ue_5.3\\engine\\plugins\\online\\onlinesubsystem\\source\\public\\onlinekeyvaluepair.h",
+            "c:\\gamscreate\\unrl53\\mpshooter\\plugins\\multiplayersessions\\intermediate\\build\\win64\\unrealgame\\inc\\multiplayersessions\\uht\\multiplayersessionssubsystem.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
